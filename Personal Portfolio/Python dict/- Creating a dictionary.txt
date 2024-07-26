@@ -1,0 +1,44 @@
+-> Creating a dictionary:
+# First method
+dictionary = {'key_1': 1, 'key_2': 2}
+# Second method
+dictionary = {}
+dictionary['key_1'] = 1
+dictionary['key_2'] = 2
+
+-> Retrieving individual dictionary values:
+dictionary = {'key_1': 100, 'key_2': 200}dictionary['key_1']  # Outputs 100
+dictionary['key_2']  # Outputs 200
+
+-> Removing an individual dictionary key/value:
+dictionary = {'key_1': 100, 'key_2': 200}
+dictionary.pop('key_1')  # Returns 100
+
+-> Removing all keys/values in a dictionary:
+dictionary = {'key_1': 100, 'key_2': 200}
+dictionary.clear() # Returns an empty dictionary
+
+-> Checking whether a certain value exists in the dictionary as a key:
+dictionary = {'key_1': 100, 'key_2': 200}
+'key_1' in dictionary  # Outputs True
+'key_5' in dictionary  # Outputs False
+100 in dictionary  # Outputs False
+
+•> Updating dictionary values:
+dictionary = {'key_1': 100, 'key_2': 200}
+dictionary['key_1'] += 600  # This will change the value to 700
+
+•> Loading JSON data from a file into a dictionary:
+# Import the json module
+import json
+# Open the file
+opened_file = open('json_global_daily_sales.json')
+# Load the JSON data in the file into a dictionary
+orders = json.load(opened_file)
+
+CONCEPTS:
+•> We call the index of a dictionary value a key. In 'price': 899.00, the dictionary key is 'price', and the dictionary value is 899.00. As a whole, 'price': 899.00 is a key-value pair.
+•> Dictionary values can be any data type: strings, integers, floats, Booleans, lists, and even dictionaries (nested dictionaries). Dictionary keys can be almost any data type except lists and dictionaries. If we use lists or dictionaries as dictionary keys, we'll get an error.
+•> We can check if a certain value exists in the dictionary as a key using an in operator. An inexpression always returns a Boolean value.
+•> When we iterate over a dictionary with a for loop, we loop over the dictionary keys by default.
+•> We can use JSON data to transmit data between different system components and easily convert it into Python dictionaries.
